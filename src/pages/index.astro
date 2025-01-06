@@ -1,9 +1,36 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import foodImage from '../images/food.jpg';
+import H1 from '../components/H1.astro';
 ---
 
 <Layout>
-  <h1>Init Title</h1>
-  <button class='btn btn-primary'>Primary</button>
-  <button class='btn btn-accent'>Accent</button>
+  <div class='flex flex-col'>
+    <header>
+      <H1>Delicious Recipes</H1>
+      <p class='mt-4'>Your guide to tasty dishes</p>
+    </header>
+
+    <section class='container'>
+      <header>
+        <div class='my-6'></div>
+        <H1>Welcome to Power Cooks Recipe Website</H1>
+        <div class='my-4'></div>
+        <p>
+          Discover a world of delicious recipes, simple ingredients, and
+          easy-to-follow instructions. Whether you're a seasoned chef or just
+          starting out, you'll find something to inspire your next meal.
+        </p>
+        <p>Start exploring and unleash your inner chef!</p>
+      </header>
+    </section>
+
+    <div class='my-4'></div>
+    <Image
+      src={foodImage}
+      alt='Picture of zeytinyagli sarma, an Istanbul relish.'
+      width='400'
+    />
+  </div>
 </Layout>
